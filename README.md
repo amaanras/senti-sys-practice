@@ -1,5 +1,6 @@
 # senti-sys-practice
-Greetings! I'm Amaan a software engineering student at WeThinkCode_, and I'm currently working on a side project focused on sentiment analysis. If you have any questions or would like to contribute to this project, please feel free to reach out to me. You can contact me via email at amaanras.petersen@gmail.com or connect with me on LinkedIn at amaan ras.
+Greetings! I'm Amaan a software engineering student at WeThinkCode_, and I'm currently working on a side project focused on sentiment analysis. If you have any questions or would like to contribute to this project, please feel free to reach out to me. You can contact me via email at amaanras.petersen@gmail.com or connect with me on LinkedIn at https://za.linkedin.com/in/amaan-ras-183243178
+----------------------------------
 My Work Flow for this project: so far....
 
 1. **Load the Dataset:** Started by loading the CSV file containing the review dataset into my Python environment. and using `pandas` library to read the CSV file and create a dataframe.
