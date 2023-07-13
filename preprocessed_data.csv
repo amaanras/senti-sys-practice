@@ -1,0 +1,7 @@
+Review Text,Sentiment
+"['product', 'exceed', 'expectations.', 'highli', 'recommended!']",positive
+"['qualiti', 'product', 'realli', 'poor.', ""i'm"", 'disappointed.']",negative
+"['great', 'valu', 'price.', 'love', 'product!']",positive
+"['terribl', 'product.', 'wast', 'money.']",negative
+"['custom', 'servic', 'fantastic.', ""i'm"", 'impressed!']",positive
+"['regret', 'buy', 'product.', 'meet', 'expectations.']",negative

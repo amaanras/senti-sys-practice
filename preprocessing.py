@@ -10,7 +10,7 @@ nltk.download('stopwords')
 df = pd.read_csv('Product review sentiment - Sheet1.csv')
 
 # Displaying the initial dataframe
-print(df.head())
+# print(df.head())
 
 # Text processing  'Review Text' is column in csv
 df['Review Text'] = df['Review Text'].str.replace('[^\w\s]','') # removing the punctions
@@ -28,3 +28,6 @@ df['Review Text'] = df['Review Text'].apply(lambda x: [stemmer.stem(word) for wo
 # displaying the preprocessed dataframe
 #print(df.to_string(index=False)) 
 print(df.head())
+
+#saving the preprocessed dataframe to a csv file
+df.to_csv('preprocessed_data.csv', index = False)
