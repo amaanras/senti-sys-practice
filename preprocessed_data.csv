@@ -5,3 +5,13 @@ Review Text,Sentiment
 "['terribl', 'product.', 'wast', 'money.']",negative
 "['custom', 'servic', 'fantastic.', ""i'm"", 'impressed!']",positive
 "['regret', 'buy', 'product.', 'meet', 'expectations.']",negative
+"['product', 'arriv', 'time', 'perfect', 'condition.', ""i'm"", 'satisfied!']",positive
+"[""i'v"", 'never', 'disappoint', 'purchase.', 'complet', 'wast', 'money.']",negative
+"[""can't"", 'imagin', 'life', 'without', 'product.', 'amazing!']",positive
+"['product', 'total', 'rip-off.', 'recommend', 'anyone.']",negative
+"['qualiti', 'product', 'top-notch.', 'worth', 'everi', 'penny!']",positive
+"['wast', 'money', 'product.', 'poor', 'quality.']",negative
+"[""i'm"", 'absolut', 'thrill', 'purchase.', 'product', 'exceed', 'expectations!']",positive
+"['product', 'total', 'letdown.', 'work', 'advertised.']",negative
+"['custom', 'support', 'team', 'help', 'resolv', 'issu', 'promptly.', 'great', 'service!']",positive
+"['recommend', 'product', 'anyone.', 'complet', 'disappointment.']",negative
