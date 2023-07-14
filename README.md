@@ -20,6 +20,9 @@ This project serves as a learning exercise to gain insights into machine learnin
 
 2. Install the required packages:
 
+   `pip install -r requirements.txt`
+
+
 
 ## Usage
 
@@ -27,7 +30,7 @@ This project serves as a learning exercise to gain insights into machine learnin
 
 2. Preprocess the data: Run the `preprocess.py` script to clean and preprocess the review text.
 
-3. Run the 'training.py' for
+3. Run the `training.py` for
         - Extracting the features, convert the preprocessed review text into numerical features using TF-IDF vectorization.
         - Training the model, train the sentiment analysis model on the training data.
         - Evaluating the model, assess the model's performance on the testing data.
