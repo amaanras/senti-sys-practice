@@ -4,18 +4,20 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
 from colorama import Fore, Style
+import pickle
 
+# Load the preprocessed DataFrame from the Pickle file
+with open('preprocessed_data.pickle', 'rb') as f:
+    df = pickle.load(f)
 
+# Convert the tokenized words back to strings
+df['Review Text'] = df['Review Text'].apply(' '.join)
 
+# Splitting the dataset into features and labels
+x = df['Review Text']  # Features (review text)
+y = df['Sentiment']    # Labels (sentiment)
 
-
-df = pd.read_csv('preprocessed_data.csv')
-
-#splitting the dataset into features and lables
-x = df['Review Text'] # Features (review text)
-y = df['Sentiment'] # Labels (sentiment)
-
-# for extraction using TF-IDF Vectorization because of relativley small dataset 
+# For extraction using TF-IDF Vectorization because of a relatively small dataset
 
 # Initialize the vectorizer
 vectorizer = TfidfVectorizer()

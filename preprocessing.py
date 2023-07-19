@@ -1,35 +1,32 @@
-#--- amaanras.petersen@gmail.com ---
 import pandas as pd
 import nltk
 from nltk.tokenize import WordPunctTokenizer
 from nltk.stem import WordNetLemmatizer
+import pickle
 
 nltk.download('wordnet')
 
-#loading dataset 
+# Loading dataset
 df = pd.read_csv('Product review sentiment - Sheet1.csv')
 
+# Text processing - 'Review Text' is a column in the CSV
 
-# Text processing  'Review Text' is column in csv
-
-#keeping some punctuation marks
+# Keeping some punctuation marks
 punctuation_to_keep = ['!', '?']
 df['Review Text'] = df['Review Text'].apply(lambda x: ''.join([c for c in x if c.isalnum() or c.isspace() or c in punctuation_to_keep]))
-df['Review Text'] = df['Review Text'].str.lower() # converting all letter to lower case to make is easier and cosistant
+df['Review Text'] = df['Review Text'].str.lower()  # Converting all letters to lowercase to make it easier and consistent
 
-# tokenizer --using nltk.tokenize.WordPunctTokenizer rather
-# df['Review Text'] = df['Review Text'].str.split()
+# Tokenization using nltk.tokenize.WordPunctTokenizer
 tokenizer = WordPunctTokenizer()
 df['Review Text'] = df['Review Text'].apply(tokenizer.tokenize)
 
+# Lemmatization
 lemmatizer = WordNetLemmatizer()
 df['Review Text'] = df['Review Text'].apply(lambda x: [lemmatizer.lemmatize(word) for word in x])
 
-
-
-# displaying the preprocessed dataframe
-#print(df.to_string(index=False)) 
+# Displaying the preprocessed dataframe
 print(df.head())
 
-#saving the preprocessed dataframe to a csv file
-df.to_csv('preprocessed_data.csv', index = False)
+# Saving the preprocessed DataFrame to a Pickle file
+with open('preprocessed_data.pickle', 'wb') as f:
+    pickle.dump(df, f)
