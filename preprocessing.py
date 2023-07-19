@@ -3,23 +3,29 @@ import pandas as pd
 import nltk
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
+from nltk.tokenize import WordPunctTokenizer
 
 nltk.download('stopwords')
 
 #loading dataset 
 df = pd.read_csv('Product review sentiment - Sheet1.csv')
 
-#keeping some punctuation marks
-punctuation_to_keep = ['!', '?']
-df['Review Text'] = df['Review Text'].apply(lambda x: ''.join([c for c in x if c.isalnum() or c.isspace() or c in punctuation_to_keep]))
 
 # Displaying the initial dataframe
 # print(df.head())
 
 
 # Text processing  'Review Text' is column in csv
+#keeping some punctuation marks
+punctuation_to_keep = ['!', '?']
+df['Review Text'] = df['Review Text'].apply(lambda x: ''.join([c for c in x if c.isalnum() or c.isspace() or c in punctuation_to_keep]))
+
 df['Review Text'] = df['Review Text'].str.lower() # converting all letter to lower case to make is easier and cosistant
-df['Review Text'] = df['Review Text'].str.split() # tokenization
+
+# tokenizer --using nltk.tokenize.WordPunctTokenizer rather
+# df['Review Text'] = df['Review Text'].str.split()
+tokenizer = WordPunctTokenizer()
+df['Review Text'] = df['Review Text'].apply(tokenizer.tokenize)
 
 # stopword removal....common words that dont carry any signaficant meaning
 stop_words = set(stopwords.words('english'))
