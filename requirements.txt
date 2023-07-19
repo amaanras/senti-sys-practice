@@ -3,3 +3,25 @@ pandas==1.3.0
 scikit-learn==0.24.2
 nltk==3.6.2
 colorama==0.4.4
+
+
+
+
+
+Review Text,Sentiment
+"['product', 'exceed', 'expectations.', 'highli', 'recommended!']",positive
+"['qualiti', 'product', 'realli', 'poor.', ""i'm"", 'disappointed.']",negative
+"['great', 'valu', 'price.', 'love', 'product!']",positive
+"['terribl', 'product.', 'wast', 'money.']",negative
+"['custom', 'servic', 'fantastic.', ""i'm"", 'impressed!']",positive
+"['regret', 'buy', 'product.', 'meet', 'expectations.']",negative
+"['product', 'arriv', 'time', 'perfect', 'condition.', ""i'm"", 'satisfied!']",positive
+"[""i'v"", 'never', 'disappoint', 'purchase.', 'complet', 'wast', 'money.']",negative
+"[""can't"", 'imagin', 'life', 'without', 'product.', 'amazing!']",positive
+"['product', 'total', 'rip-off.', 'recommend', 'anyone.']",negative
+"['qualiti', 'product', 'top-notch.', 'worth', 'everi', 'penny!']",positive
+"['wast', 'money', 'product.', 'poor', 'quality.']",negative
+"[""i'm"", 'absolut', 'thrill', 'purchase.', 'product', 'exceed', 'expectations!']",positive
+"['product', 'total', 'letdown.', 'work', 'advertised.']",negative
+"['custom', 'support', 'team', 'help', 'resolv', 'issu', 'promptly.', 'great', 'service!']",positive
+"['recommend', 'product', 'anyone.', 'complet', 'disappointment.']",negative
