@@ -9,11 +9,15 @@ nltk.download('stopwords')
 #loading dataset 
 df = pd.read_csv('Product review sentiment - Sheet1.csv')
 
+#keeping some punctuation marks
+punctuation_to_keep = ['!', '?']
+df['Review Text'] = df['Review Text'].apply(lambda x: ''.join([c for c in x if c.isalnum() or c.isspace() or c in punctuation_to_keep]))
+
 # Displaying the initial dataframe
 # print(df.head())
 
+
 # Text processing  'Review Text' is column in csv
-df['Review Text'] = df['Review Text'].str.replace('[^\w\s]','') # removing the punctions
 df['Review Text'] = df['Review Text'].str.lower() # converting all letter to lower case to make is easier and cosistant
 df['Review Text'] = df['Review Text'].str.split() # tokenization
 
