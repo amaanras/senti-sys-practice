@@ -1,7 +1,6 @@
 #--- amaanras.petersen@gmail.com ---
 import pandas as pd
 import nltk
-from nltk.stem import PorterStemmer
 from nltk.tokenize import WordPunctTokenizer
 from nltk.stem import WordNetLemmatizer
 
@@ -27,9 +26,6 @@ lemmatizer = WordNetLemmatizer()
 df['Review Text'] = df['Review Text'].apply(lambda x: [lemmatizer.lemmatize(word) for word in x])
 
 
-# stemming avoiding having multiple versions of the same word
-stemmer = PorterStemmer()
-df['Review Text'] = df['Review Text'].apply(lambda x: [stemmer.stem(word) for word in x])
 
 # displaying the preprocessed dataframe
 #print(df.to_string(index=False)) 
